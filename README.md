@@ -18,7 +18,7 @@ A personal portfolio website showcasing projects, skills, and experience as an A
 - [Contact](#contact)
 
 ## Demo
-Access the live demo of this portfolio [here](https://sv-dev.netlify.app/).
+Access the live demo of this portfolio [here](https://vivekportfolio3101.netlify.app/).
 
 ## Features
 - **Responsive Design**: Adapts seamlessly across devices (desktop, tablet, mobile).
