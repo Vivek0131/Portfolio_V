@@ -1,16 +1,66 @@
-.footer{
+.footer {
     width: 100%;
     color: #fff;
-    min-height: 100px;
-    position: relative;
-    bottom: 0;
     background: #21262c;
+    padding: 20px 0; /* Padding for spacing */
 }
 
-/* .foort_container{
-    border: 2px solid red;
-} */
+.footer_container {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-around; /* Even spacing */
+    align-items: flex-start; /* Align items to the top */
+    max-width: 1200px; /* Max width for container */
+    width: 100%; /* Full width */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    margin: 0 auto; /* Center container */
+}
 
-.footer .first,.second,.third{
-    width: 300px;
+.footer .first, .footer .second, .footer .third {
+    margin: 20px; /* Margin for spacing */
+    text-align: center; /* Center align text */
+    flex: 1; /* Equal width for all sections */
+    min-width: 250px; /* Minimum width for smaller screens */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center social icons */
+    margin-top: 10px; /* Space above icons */
+}
+
+.social-icons i {
+    color: #fff; /* White color for icons */
+    font-size: 24px; /* Icon size */
+    margin: 0 10px; /* Spacing between icons */
+    transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+.social-icons i:hover {
+    color: #6c63ff; /* Change color on hover */
+}
+
+.footer a {
+    color: #6c63ff; /* Color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer_container {
+        flex-direction: column; /* Stack sections on small screens */
+        align-items: center; /* Center align items */
+    }
+
+    .footer .first, .footer .second, .footer .third {
+        margin: 10px 0; /* Vertical spacing for stacked items */
+    }
+
+    .footer .first, .footer .second, .footer .third {
+        width: 100%; /* Full width for each section */
+        text-align: center; /* Center text for mobile */
+    }
 }

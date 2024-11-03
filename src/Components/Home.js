@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
 import Button from 'react-bootstrap/Button';
-import "./Home.css"
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import "./Home.css";
 
 const Home = () => {
   return (
@@ -8,34 +9,36 @@ const Home = () => {
       <div className="container home_container">
         <div className="home_innerdiv">
           <div className="left_div">
-            <h2>Welcome to <span style={{ color: "#6c63ff" }}>Vivek Khandelwal</span></h2>
-            <p style={{ color: "#666", letterSpacing: ".5px", marginTop: 2 }}>
-              I am Vivek Khandelwal, a Btech undergraduate student with experience in Android and web development. I specialize in using tools like Kotlin, Jetpack Compose, Firebase, and more. I'm always eager to learn new technologies and work on exciting projects that challenge me to grow professionally.
+            <h2>Welcome to <span className="highlight">Vivek Khandelwal's</span> Portfolio</h2>
+            <p className="intro_text">
+              I am a B.Tech undergraduate student passionate about Android and web development.
+              Proficient in Kotlin, Jetpack Compose, Firebase, and more, I’m always eager to
+              explore new technologies and take on exciting projects that help me grow professionally.
             </p>
             <div className="btn_div mt-4">
               <Button
-                variant="danger"
+                variant="outline-dark"
                 href="https://github.com/Vivek0131"
-                style={{ letterSpacing: "1px", border: "none", borderRadius: 4, background: "#2f2d69", marginRight: 24 }}
+                className="icon_btn"
               >
-                Github
+                <FaGithub className="icon" /> GitHub
               </Button>
               <Button
-                variant="danger"
+                variant="outline-primary"
                 href="https://www.linkedin.com/in/vivek-khandelwal-bb1159193"
-                style={{ letterSpacing: "1px", border: "none", borderRadius: 4, background: "#6c63ff" }}
+                className="icon_btn"
               >
-                Linkedin
+                <FaLinkedin className="icon" /> LinkedIn
               </Button>
             </div>
           </div>
           <div className="right_div">
-            <img src="hp.png" alt="Vivek Khandelwal" />
+            <img src="hp.png" alt="Vivek Khandelwal" className="profile_image" />
           </div>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

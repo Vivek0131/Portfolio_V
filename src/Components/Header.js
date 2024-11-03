@@ -13,7 +13,7 @@ const Header = () => {
     }
 
   return (
-    <Navbar bg="light" data-bs-theme="light">
+    <Navbar bg="dark" data-bs-theme="dark">
     <Container>
         <div>
         <h2 className='mt-2 h2_right' style={{ color: "#6C63FF" }}>

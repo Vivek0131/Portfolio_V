@@ -1,0 +1,35 @@
+.container {
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.card {
+    border: none; /* Remove default border */
+}
+
+.card-img-top {
+    border-radius: 0.5rem; /* Rounded corners for images */
+}
+
+.row {
+    margin: 0; /* Remove margin from the row */
+}
+
+@media (max-width: 768px) {
+    .card {
+        margin: 10px 0; /* Space between cards on mobile */
+    }
+
+    .card-img-top {
+        height: 8rem; /* Adjust image height for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .card-img-top {
+        height: 6rem; /* Further adjust image height for extra small screens */
+    }
+}
