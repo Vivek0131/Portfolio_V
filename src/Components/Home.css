@@ -1,87 +1,99 @@
 /* Container styles */
 .home_container {
-    min-height: 85vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f9f9f9; /* Light background for contrast */
-    padding: 20px; /* Add padding for breathing space */
-  }
-  
+  min-height: 85vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.home_container .home_innerdiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: white;
+  overflow: hidden;
+}
+
+/* Left section styling */
+.home_container .home_innerdiv .left_div {
+  margin-top: 95px;
+  max-width: 430px;
+  padding: 20px;
+}
+
+/* Right section styling */
+.home_container .home_innerdiv .right_div {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Image styling */
+.home_container .home_innerdiv .right_div img {
+  width: 480px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.home_container .home_innerdiv .right_div img:hover {
+  transform: scale(1.05);
+}
+
+/* Media Queries */
+
+/* For screens 995px and below (Tablets and small laptops) */
+@media (max-width: 995px) {
   .home_container .home_innerdiv {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 1200px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Correct shadow syntax */
-    border-radius: 8px;
-    background-color: white;
-    overflow: hidden; /* To prevent overflow */
-  }
-  
-  /* Left section styling */
-  .home_container .home_innerdiv .left_div {
-    margin-top: 95px;
-    max-width: 430px;
-    padding: 20px;
-  }
-  
-  /* Right section styling */
-  .home_container .home_innerdiv .right_div {
-    margin-top: 70px;
-    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    padding: 15px;
   }
-  
-  /* Image styling */
+  .home_container .home_innerdiv .left_div {
+    margin: 40px auto;
+    max-width: 630px;
+  }
   .home_container .home_innerdiv .right_div img {
-    width: 480px;
-    height: auto; /* Maintain aspect ratio */
-    transition: transform 0.3s ease; /* Corrected syntax for smooth scaling on hover */
+    max-width: 400px;
   }
-  
-  .home_container .home_innerdiv .right_div img:hover {
-    transform: scale(1.05); /* Image grows on hover */
+}
+
+/* For screens 768px and below (Tablets) */
+@media (max-width: 768px) {
+  .home_container .home_innerdiv .left_div {
+    text-align: center; /* Center-align text on smaller screens */
   }
-  
-  /* Media Queries */
-  
-  /* For screens 995px and below */
-  @media (max-width: 995px) {
-    .home_container .home_innerdiv {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 15px;
-    }
-    .home_container .home_innerdiv .left_div {
-      margin: 60px auto;
-      max-width: 630px;
-    }
-    .home_container .home_innerdiv .right_div img {
-      max-width: 680px;
-    }
+}
+
+/* For screens 568px and below (Mobile screens) */
+@media (max-width: 568px) {
+  .home_container .home_innerdiv .left_div {
+    margin: 30px auto;
+    max-width: 90%; /* Width adjustment for mobile */
+    text-align: center;
   }
-  
-  /* For screens 568px and below */
-  @media (max-width: 568px) {
-    .home_container .home_innerdiv {
-      flex-direction: column;
-    }
-    .home_container .home_innerdiv .left_div {
-      margin: 60px auto;
-      max-width: 630px;
-    }
-    .home_container .home_innerdiv .right_div img {
-      max-width: 380px;
-    }
+  .home_container .home_innerdiv .right_div img {
+    max-width: 300px;
   }
-  
-  /* For screens 400px and below */
-  @media (max-width: 400px) {
-    .home_container .home_innerdiv .right_div img {
-      max-width: 280px;
-    }
+}
+
+/* For screens 400px and below (Very small mobile screens) */
+@media (max-width: 400px) {
+  .home_container {
+    padding: 10px;
   }
-  
+  .home_container .home_innerdiv .right_div img {
+    max-width: 250px;
+  }
+  .home_container .home_innerdiv .left_div {
+    padding: 10px;
+    font-size: 0.9rem; /* Adjust font size for very small screens */
+  }
+}

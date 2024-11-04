@@ -1,40 +1,35 @@
-import React from 'react'
+import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from 'react-router-dom';
 
 const Header = () => {
+    const common = {
+        marginRight: 15,
+        fontSize: 17,
+        letterSpacing: ".5px",
+        color: "white" // Ensures the text color is visible on a dark background
+    };
 
-    const common={
-        marginRight:15,
-        fontSize:17,
-        letterSpacing:".5px"
-    }
+    return (
+        <Navbar bg="dark" variant="dark" expand="lg">
+            <Container>
+                <Navbar.Brand href="#home" style={{ color: "#6C63FF" }}>
+                    Vivek Khandelwal
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end"> {/* Aligns content to the right */}
+                    <Nav>
+                        <NavLink to="/" className="text-decoration-none" style={common}>Home</NavLink>
+                        <NavLink to="/about" className="text-decoration-none" style={common}>About</NavLink>
+                        <NavLink to="/project" className="text-decoration-none" style={common}>Projects</NavLink>
+                        <NavLink to="/contact" className="text-decoration-none" style={common}>Contact</NavLink>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
+    );
+};
 
-  return (
-    <Navbar bg="dark" data-bs-theme="dark">
-    <Container>
-        <div>
-        <h2 className='mt-2 h2_right' style={{ color: "#6C63FF" }}>
-            <Nav.Link href="#home">Vivek Khandelwal</Nav.Link>
-            </h2>
-        </div>
-      
-      <Nav className="">
-        <div className='mt-2'>
-        <NavLink to="/"className="text-decoration-none" style={common}>Home</NavLink>
-        <NavLink to="/about"className="text-decoration-none"style={common}>About</NavLink>
-        <NavLink to="/project"className="text-decoration-none"style={common}>Projects</NavLink>
-        <NavLink to="/contact"className="text-decoration-none"style={common}>Contact</NavLink>
-        
-        </div>
-       
-        
-      </Nav>
-    </Container>
-  </Navbar>
-  )
-}
-
-export default Header
+export default Header;

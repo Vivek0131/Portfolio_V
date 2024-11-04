@@ -2,7 +2,7 @@
     width: 100%;
     color: #fff;
     background: #21262c;
-    padding: 20px 0; /* Padding for spacing */
+    /*padding: 20px 0; /* Padding for spacing */
     display: flex; /* Flexbox for layout */
     justify-content: center; /* Center content */
 }

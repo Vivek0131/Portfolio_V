@@ -1,68 +1,79 @@
 /* About Section Container */
 .about_container {
-    min-height: 85vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #f0f0f0, #e6e6ff);
-    padding: 20px;
-  }
-  
-  /* Main Layout Container */
+  min-height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f0f0f0, #e6e6ff);
+  padding: 20px;
+}
+
+/* Main Layout Container */
+.main_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex-direction: row; /* Default to row layout */
+}
+
+/* Right Container with Image */
+.main_container .right_container img {
+  width: 350px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Image */
+.main_container .right_container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive Layout for Tablets and Smaller Screens */
+@media (max-width: 2px) {
   .main_container {
-    display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Stack items vertically */
     align-items: center;
-    max-width: 1200px;
-    width: 100%;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    flex-direction: row; /* Default to row layout */
+    text-align: center; /* Center-align text on smaller screens */
+    padding: 15px; /* Adjust padding for smaller screens */
   }
-  
-  /* Right Container with Image */
+
   .main_container .right_container img {
-    width: 350px;
+    width: 300px; /* Reduce image size for smaller screens */
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px 0;
   }
-  
-  /* Hover Effect for Image */
-  .main_container .right_container img:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Further Adjustments for Smaller Mobile Screens */
+@media (max-width: 480px) {
+  .main_container .right_container img {
+    width: 250px; /* Further reduce image size for mobile */
+    height: auto;
+    margin: 15px 0;
   }
-  
-  /* Responsive Layout for Tablets and Smaller Screens */
-  @media (max-width: 768px) {
-    .main_container {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 1px;
-    }
-    
-    .main_container .right_container img {
-      width: 300px;
-      height: auto;
-      margin: 20px 0;
-    }
+
+  .about_container {
+    padding: 10px; /* Reduced padding for small screens */
   }
-  
-  /* Further Adjustments for Smaller Mobile Screens */
-  @media (max-width: 480px) {
-    .main_container .right_container img {
-      width: 250px;
-      height: auto;
-      margin: 15px 0;
-    }
-    
-    .about_container {
-      padding: 15px; /* Reduced padding for smaller screens */
-    }
+}
+
+/* Additional Adjustments for Extra Small Screens (320px and below) */
+@media (max-width: 320px) {
+  .main_container {
+    padding: 5px; /* Minimize padding for very small screens */
   }
-  
+
+  .main_container .right_container img {
+    width: 200px; /* Set a maximum width for extra small screens */
+    height: auto;
+  }
+}
